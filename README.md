@@ -2,9 +2,7 @@
 Simple pulse countdown view which is based on Textview.
 
 ## Demo:
-Sample app available on the [Play Store]
-
-![SmoothProgressBar](screenshots/pulse-countdown-view.gif)    
+<img src="/screenshots/pulse-countdown-view.gif" height="500" />
 
 ## Integration     
 ```groovy
