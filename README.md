@@ -1,6 +1,6 @@
 ## Description
-Simple pulse countdown view which is based on TextView.
-
+Simple pulse countdown view which is based on TextView.  
+minSdkVersion ***22 (Lollipop 5.1)*** - But you can try to use it in a lower version as well. It should work.
 ## Demo:
 <img src="/screenshots/pulse-countdown-view.gif" height="500" />
 
