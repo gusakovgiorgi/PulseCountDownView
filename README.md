@@ -1,5 +1,5 @@
 ## Description
-Simple pulse countdown view which is based on Textview.
+Simple pulse countdown view which is based on TextView.
 
 ## Demo:
 <img src="/screenshots/pulse-countdown-view.gif" height="500" />
