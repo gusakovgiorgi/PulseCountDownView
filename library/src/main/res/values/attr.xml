@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="PulseCountDown">
+        <attr name="pc_startValue" format="integer" />
+        <attr name="pc_endValue" format="integer" />
+    </declare-styleable>
+</resources>
