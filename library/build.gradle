@@ -16,7 +16,7 @@ publish {
     userOrg = 'hasana7'
     groupId = 'com.gusakov'
     artifactId = 'pulse-countdown'
-    repoName = 'countdown'
+    repoName = 'pulse-countdown'
     publishVersion = '1.0.0-rc1' // release candidate
     desc = 'This is a simple pulse countdown view'
     website = 'https://github.com/gusakovgiorgi/PulseCountDownView.git'
