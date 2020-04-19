@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView
 
 
 class PulseCountDown : AppCompatTextView {
+
     /**
      * class that holds values for custom attributes
      */
@@ -16,6 +17,28 @@ class PulseCountDown : AppCompatTextView {
         set(value) {
             field = value
             currentCnt = value.startValue
+        }
+
+    /**
+     * Sets start value for this countdown view if it is bigger than current end value
+     */
+    var startValue: Int = customAttributes.startValue
+        set(value) {
+            if (value > customAttributes.endValue) {
+                field = value
+                customAttributes.startValue = value
+            }
+        }
+
+    /**
+     * Sets end value for this countdown view if it is less than current start value
+     */
+    var endValue: Int = customAttributes.endValue
+        set(value) {
+            if (value < customAttributes.startValue) {
+                field = value
+                customAttributes.endValue = value
+            }
         }
 
     private var currentCnt: Int = customAttributes.startValue
