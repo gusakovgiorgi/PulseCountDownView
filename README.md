@@ -7,7 +7,7 @@ minSdkVersion ***22 (Lollipop 5.1)*** - But you can try to use it in a lower ver
 ## Integration     
 ```groovy
 dependencies {
-  implementation 'com.gusakov:pulse-countdown:1.0.0-rc1'
+  implementation 'com.gusakov:pulse-countdown:1.0.0-rc2'
 }
 ```
 
