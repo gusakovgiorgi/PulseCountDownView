@@ -6,6 +6,7 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
 import androidx.appcompat.widget.AppCompatTextView
+import com.gusakov.library.java.interfaces.OnCountdownCompleted
 
 
 class PulseCountDown : AppCompatTextView {
@@ -62,7 +63,7 @@ class PulseCountDown : AppCompatTextView {
     /**
      * This labda is invoked when animation is completed
      */
-    private var animationCompleted: () -> Unit = {}
+    private var onCountdownCompleted: OnCountdownCompleted? = null
 
     constructor(context: Context) : super(context)
 
@@ -94,8 +95,11 @@ class PulseCountDown : AppCompatTextView {
 
     }
 
-    fun start(completed: () -> Unit = {}) {
-        animationCompleted = completed
+    /**
+     * Start countdown and invoke callback when it's ended
+     */
+    fun start(callback: OnCountdownCompleted) {
+        onCountdownCompleted = callback
         currentCnt = customAttributes.startValue
         handleAnimation()
     }
@@ -118,9 +122,7 @@ class PulseCountDown : AppCompatTextView {
             currentCnt--
             scaleAnimationStarted = true
             startAnimation(scaleAnimation)
-        } else animationCompleted()
+        } else onCountdownCompleted?.completed()
 
     }
-
-
 }
